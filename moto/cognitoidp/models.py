@@ -1354,6 +1354,7 @@ class CognitoIdpBackend(BaseBackend):
         )
 
         user_pool.users[user.username] = user
+        user_pool.users[user.id] = user
         return user
 
     def admin_confirm_sign_up(self, user_pool_id: str, username: str) -> str:
